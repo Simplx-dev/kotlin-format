@@ -137,7 +137,7 @@ class Transformer internal constructor(private val formatter: Formatter) {
         if (length >= width) {
             return source.toString()
         }
-        val paddings = CharArray(width - length) {paddingChar}
+        val paddings = CharArray(width - length) { paddingChar }
         val insertString = String(paddings)
         if (paddingRight!!) {
             source.append(insertString)
@@ -183,8 +183,7 @@ class Transformer internal constructor(private val formatter: Formatter) {
         } else if (arg is Byte) {
             (arg as Byte).toLong()
         } else {
-            throw Exception(
-            )
+            error("Value not supported [$arg] for type `$currentConversionType'")
         }
         if ('d' != currentConversionType) {
             if (formatToken!!.isFlagSet(FormatToken.FLAG_ADD)
