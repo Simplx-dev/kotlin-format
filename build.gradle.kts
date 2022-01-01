@@ -20,7 +20,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "dev.simplx"
             artifactId = "kotlin-format"
-            version = "1.1"
+            version = "1.2"
 
             from(components["java"])
         }
