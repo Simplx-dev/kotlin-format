@@ -7,6 +7,8 @@ The code is a pure Kotlin implementation adapted from [Apache Harmony project](h
 
 ## Usage
 
+``` implementation 'com.github.Simplx-dev:kotlin-format:1.2'```
+
 ```kotlin
 val formatted = KotlinFormatter.format("Adding row %1$d to row %2$d", 2, 3)
 ```
